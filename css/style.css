@@ -1,0 +1,29 @@
+.header{
+    background-color: black;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 12;
+}
+
+.general{
+    color: white;
+}
+
+.logo>img{
+    grid-column-start: 1;
+    height: 100px;
+    width: 100px;
+}
+.about{
+    grid-column-start: 8;
+}
+.skills{
+    grid-column-start: 9;
+}
+.work{
+    grid-column-start: 10;
+}
+.contact{
+    grid-column-start: 11;
+}
+
