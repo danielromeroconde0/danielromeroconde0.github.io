@@ -43,6 +43,7 @@ body
 
 .skills {
     display: flex;
+    font-size: x-large;
     justify-content: center;
     align-items: center;
     grid-column-start: 2;
