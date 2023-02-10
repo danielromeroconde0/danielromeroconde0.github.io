@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Roboto+Condensed:wght@700&family=Signika&display=swap');
 
+/* Mobile*/
+
 /* Header - All pages */
 
 .header {
     background-color: black;
     display: grid;
-    grid-template-columns: repeat(6);
+    grid-template-columns: repeat(5);
+    grid-template-rows: repeat(2);
 }
 
 .general {
@@ -19,35 +22,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-column-start: 1;
+    grid-column-start: 3;
+    grid-row-start: 1;
 }
 
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-column-start: 3;
+    grid-column-start: 1;
+    grid-row-start: 2;
+
 }
 
 .skills {
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-column-start: 4;
+    grid-column-start: 2;
+    grid-row-start: 2;
 }
 
 .work {
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-column-start: 5;
+    grid-column-start: 4;
+    grid-row-start: 2;
 }
 
 .contact {
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-column-start: 6;
+    grid-column-start: 5;
+    grid-row-start: 2;
 }
 
 a:link,
@@ -66,7 +75,7 @@ a:hover {
     font-family: 'EB Garamond', serif;
     display: grid;
     grid-template-columns: repeat(6, auto);
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
     margin-top: 20px;
     row-gap: 10px;
     column-gap: 10px;
@@ -78,6 +87,7 @@ a:hover {
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 1;
+    width: 100%;
 }
 
 .image {
@@ -90,9 +100,9 @@ a:hover {
     font-family: 'Signika', sans-serif;
     font-size: larger;
     border: 4px double rgb(3, 3, 61);
-    grid-column-start: 3;
-    grid-column-end: 4;
     text-align: center;
+    grid-column-start: 3;
+    grid-column-end: 5;
     grid-row-start: 3;
 }
 
@@ -101,9 +111,21 @@ a:hover {
     font-size: larger;
     border: 4px double rgb(3, 3, 61);
     text-align: center;
-    grid-column-start: 4;
-    grid-row-start: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+}
 
+.mainImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.secondeImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* General container for all pages */
@@ -125,27 +147,31 @@ a:hover {
     grid-column-start: 2;
     grid-row-start: 1;
     text-align: center;
-
 }
 
 /* About me page */
 .aboutme {
     font-family: 'EB Garamond', serif;
     font-size: larger;
-    grid-column-start: 2;
+    grid-column-start: 1;
+    grid-column-end: span 4;
     grid-row-start: 2;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .imgabout {
     display: flexbox;
     margin-left: auto;
     margin-right: auto;
-    grid-column-start: 2;
+    grid-column-start: 1;
+    grid-column-end: span 4;
     grid-row-start: 3;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 /* Skills page */
-
 .lstSkill {
     grid-column-start: 2;
     grid-row-start: 2;
@@ -156,7 +182,6 @@ a:hover {
     background-color: rgb(238, 241, 241);
     padding: 5px;
     padding-right: 15px;
-
 }
 
 /* Work page */
@@ -206,7 +231,7 @@ tr:hover {
 .img2 {
     grid-column-start: 2;
     grid-row-start: 1;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-right: auto;
 }
 
@@ -215,13 +240,15 @@ tr:hover {
     grid-row-start: 2;
     margin-left: auto;
     margin-right: 0px;
+    margin-top: 15px;
 }
 
 .img4 {
     grid-column-start: 2;
     grid-row-start: 2;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-right: auto;
+    margin-top: 15px;
 }
 
 /* Footer for all pages */
@@ -235,57 +262,48 @@ footer {
     color: white;
 }
 
-/* Mobile configuration */
 
-@media screen and (max-width : 800px) {
-    .mainImage {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+/*Desktop*/
 
-    .secondeImage {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
+@media screen and (min-width : 800px) {
+
+    /* Header - All pages */
 
     .header {
-        display: grid;
-        grid-template-columns: repeat(5);
-        grid-template-columns: repeat(2);
+        grid-template-columns: repeat(6);
+        grid-template-rows: 1
     }
 
     .logo {
-        grid-column-start: 3;
+        grid-column-start: 1;
         grid-row-start: 1;
     }
 
     .about {
-        grid-column-start: 1;
-        grid-row-start: 2;
-
+        grid-column-start: 3;
+        grid-row-start: 1;
     }
 
     .skills {
-        grid-column-start: 2;
-        grid-row-start: 2;
+        grid-column-start: 4;
+        grid-row-start: 1;
     }
 
     .work {
-        grid-column-start: 4;
-        grid-row-start: 2;
+        grid-column-start: 5;
+        grid-row-start: 1;
     }
 
     .contact {
-        grid-column-start: 5;
-        grid-row-start: 2;
+        grid-column-start: 6;
+        grid-row-start: 1;
     }
 
+    /*Home page */
+
     .main {
-        display: grid;
         grid-template-columns: repeat(6, auto);
-        grid-template-rows: repeat(4, auto);
+        grid-template-rows: repeat(3, auto);
         margin-top: 20px;
         row-gap: 10px;
         column-gap: 10px;
@@ -295,7 +313,6 @@ footer {
         grid-column-start: 3;
         grid-column-end: 5;
         grid-row-start: 1;
-        width: 100%;
     }
 
     .image {
@@ -304,35 +321,29 @@ footer {
         grid-row-start: 2;
     }
 
-    .icesi {
-        grid-column-start: 3;
-        grid-column-end: 5;
-        grid-row-start: 4;
-    }
-
     .nait {
         grid-column-start: 3;
-        grid-column-end: 5;
+        grid-column-end: 4;
         grid-row-start: 3;
     }
+
+    .icesi {
+        grid-column-start: 4;
+        grid-row-start: 3;
+
+    }
+
+    /* About me page */
+
     .aboutme {
-        font-family: 'EB Garamond', serif;
-        font-size: larger;
-        grid-column-start: 1;
-        grid-column-end: span 4;
+        grid-column-start: 2;
+        grid-column-end: span 1;
         grid-row-start: 2;
-        padding-left: 25px;
-        padding-right: 25px;
     }
-    
+
     .imgabout {
-        display: flexbox;
-        margin-left: auto;
-        margin-right: auto;
-        grid-column-start: 1;
-        grid-column-end: span 4;
+        grid-column-start: 2;
+        grid-column-end: span 1;
         grid-row-start: 3;
-        padding-left: 25px;
-        padding-right: 25px;
     }
 }
